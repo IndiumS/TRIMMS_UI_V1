@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#"  (click)="sideMenuItemSel('profile')">Profile</a>
+      <a mat-list-item href="#" (click)="sideMenuItemSel('mytimesheet')">My Time-Sheet</a>
+      <a mat-list-item href="#" (click)="sideMenuItemSel('myapprovals')">My Approvals</a>
+      <a mat-list-item href="#" (click)="sideMenuItemSel('registration')">Registration</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-icon _ngcontent-ihs-c123="" role="img" (click)="drawer.toggle()" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">menu</mat-icon>
+      <!-- <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button> -->
+      <span class="trimms-title">TRIMMS</span>
+      <span >Welcome {{userName}}</span>
+      <button mat-stroked-button color="accent" class="btn-block" (click)="logOut()">Log Out</button>
+    </mat-toolbar>
+
+
+    <app-dashboard [selComp]="curComp"></app-dashboard>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

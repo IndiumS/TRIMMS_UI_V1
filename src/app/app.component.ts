@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'UI';
+  isLoggedIn: boolean = false;
+  
+  getLoginDetails(val: any)
+  {
+    sessionStorage.setItem('username',val.username);
+    this.isLoggedIn = true;
+  }
+  Loggedout(val:any)
+  {
+    if(val)
+    this.isLoggedIn = false;
+  }
 }
