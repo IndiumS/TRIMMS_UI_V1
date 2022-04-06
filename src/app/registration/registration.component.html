@@ -1,24 +1,24 @@
-<mat-stepper class="example-stepper">
-  <mat-step [stepControl]="firstFormGroup" label="Fill out your name">
+<mat-stepper class="example-stepper" #stepper>
+  <mat-step [stepControl]="firstFormGroup" label="Fill out your name" [editable]="isEditable">
     <form [formGroup]="firstFormGroup">
 
       <div fxLayout="row">
-        <div fxLayout="column"  fxFlex="30">
-          <mat-form-field appearance="fill">
+        <div fxLayout="column" fxFlex="30">
+          <mat-form-field  appearance="outline" >
             <mat-label>First Name</mat-label>
-            <input matInput  placeholder="First name" formControlName="firstnameCtrl" required>
+            <input matInput placeholder="First name" formControlName="firstnameCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
-        <div fxLayout="column"  fxFlex="30">
-          <mat-form-field appearance="fill">
+        <div fxLayout="column" fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="30">
+          <mat-form-field appearance="outline">
             <mat-label>Last Name</mat-label>
             <input matInput placeholder="Last name" formControlName="lastnameCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
-        <div fxLayout="column"  fxFlex="30">
-          <mat-form-field appearance="fill">
+        <div fxLayout="column" fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="30">
+          <mat-form-field appearance="outline">
             <mat-label>DOB</mat-label>
             <input matInput placeholder="dob" formControlName="dobCtrl" required>
           </mat-form-field>
@@ -27,21 +27,21 @@
 
       <div fxLayout="row">
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Gender</mat-label>
             <input matInput placeholder="gender" formControlName="genderCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Email Id</mat-label>
             <input matInput placeholder="Email Id" formControlName="emailidCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Contact No</mat-label>
             <input matInput placeholder="Contact No" formControlName="contnoCtrl" required>
           </mat-form-field>
@@ -50,21 +50,21 @@
 
       <div fxLayout="row">
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Address</mat-label>
             <input matInput placeholder="Address" formControlName="addressCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>State</mat-label>
             <input matInput placeholder="state" formControlName="stateCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Country</mat-label>
             <input matInput placeholder="Country" formControlName="countryCtrl" required>
           </mat-form-field>
@@ -73,14 +73,14 @@
 
       <div fxLayout="row">
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>PIN Code</mat-label>
             <input matInput placeholder="PIN Code" formControlName="pincodeCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Alternative Num</mat-label>
             <input matInput placeholder="Alternative Num" formControlName="altnoCtrl" required>
           </mat-form-field>
@@ -96,69 +96,69 @@
   <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
     <form [formGroup]="secondFormGroup">
 
-      <div fxLayout="row" >
+      <div fxLayout="row">
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>EMP ID</mat-label>
             <input matInput placeholder="EMP ID" formControlName="empidCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>DOJ</mat-label>
             <input matInput placeholder="DOJ" formControlName="dojCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>EMP Type</mat-label>
             <input matInput placeholder="EMP Type" formControlName="emptypeCtrl" required>
           </mat-form-field>
         </div>
       </div>
 
-      <div fxLayout="row" >
+      <div fxLayout="row">
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Department</mat-label>
             <input matInput placeholder="Department" formControlName="departmentCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Designation</mat-label>
             <input matInput placeholder="Designation" formControlName="designationCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Level</mat-label>
             <input matInput placeholder="Level" formControlName="levelCtrl" required>
           </mat-form-field>
         </div>
       </div>
 
-      <div fxLayout="row" >
+      <div fxLayout="row">
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Band</mat-label>
             <input matInput placeholder="Band" formControlName="bandCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Reporting Manager</mat-label>
             <input matInput placeholder="Reporting Manager" formControlName="reportingmanagerCtrl" required>
           </mat-form-field>
         </div>
-        <div fxLayout="column"  fxFlex="5"></div>
+        <div fxLayout="column" fxFlex="5"></div>
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Location</mat-label>
             <input matInput placeholder="Location" formControlName="locationCtrl" required>
           </mat-form-field>
@@ -167,7 +167,7 @@
 
       <div fxLayout="row">
         <div fxLayout="column" fxFlex="30">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Work Exp ON DOJ</mat-label>
             <input matInput placeholder="Work Exp ON DOJ" formControlName="workexpondojCtrl" required>
           </mat-form-field>
@@ -184,8 +184,19 @@
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>
     <p>You are now done.</p>
+
+    <mat-list>
+      <mat-list-item> <strong>First Name:</strong> {{ this.firstFormGroup.value.firstnameCtrl }}</mat-list-item>
+      <mat-list-item> <strong>Last Name:</strong> {{ this.firstFormGroup.value.lastnameCtrl }}</mat-list-item>
+      <mat-list-item> <strong>DOB:</strong> {{ this.secondFormGroup.value.dobCtrl }}</mat-list-item>
+      <mat-list-item> <strong>Gender:</strong> {{ this.secondFormGroup.value.genderCtrl }}</mat-list-item>
+    </mat-list>
+
     <div>
       <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+      <button mat-button (click)="submit()">Submit</button>
     </div>
+
   </mat-step>
 </mat-stepper>
